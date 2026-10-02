@@ -69,7 +69,9 @@ Ghost এ **16টা Windows হার্ডেনিং ফাংশন** আ�
 ### সিকিউরিটি মূল্যায়ন
 ```powershell
 # Ghost মডিউল লোড করেন
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # বর্তমান সিকিউরিটি অবস্থা চেক করেন
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### অপশন 1: সরাসরি ডাউনলোড (টেস্টিং)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### অপশন 2: মডিউল ইনস্টলেশন
